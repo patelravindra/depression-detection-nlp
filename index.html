@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="background-gradient"></div> <div class="grid">
+        <div class="card" id="input-card">
+            <div class="hero-visual">
+                <svg class="hero-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.745 3.745 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                </svg>
+            </div>
+    
+            <div class="card-header">
+                <h1>Analyze Social Sentiment</h1>
+                <p class="description">
+                    Upload a user's post history to analyze language patterns for sentiment.
+                    <strong>This is an AI model, not a medical diagnosis.</strong>
+                </p>
+            </div>
+    
+            <form id="analysis-form">
+                <div class="form-group anim-delay-1">
+                    <label for="handle">
+                        <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Social Media Handle
+                    </label>
+                    <input 
+                        type="text" 
+                        id="handle" 
+                        placeholder="@username" 
+                        required
+                    >
+                </div>
+    
+                <div class="form-group anim-delay-2">
+                    <label for="file-upload">
+                        <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        Upload Post History (.txt)
+                    </label>
+                    <div class="file-input-wrapper">
+                        <input 
+                            type="file" 
+                            id="file-upload" 
+                            accept=".txt"
+                            required
+                        >
+                        <span class="file-name" id="file-name">No file chosen</span>
+                    </div>
+                </div>
+    
+                <button type="submit" id="submit-btn" class="btn btn-primary anim-delay-3">
+                    <span class="btn-text">Analyze Posts</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+    
+                <div class="loader hidden" id="loader">
+                    <div class="spinner"></div>
+                    <p class="loader-text">Analyzing your posts...</p>
+                </div>
+            </form>
+            <div class="shine"></div>
+            <div class="background">
+                <div class="tiles">
+                    <div class="tile tile-1"></div>
+                    <div class="tile tile-2"></div>
+                    <div class="tile tile-3"></div>
+                    <div class="tile tile-4"></div>
+                    <div class="tile tile-5"></div>
+                    <div class="tile tile-6"></div>
+                    <div class="tile tile-7"></div>
+                    <div class="tile tile-8"></div>
+                    <div class="tile tile-9"></div>
+                    <div class="tile tile-10"></div>
+                </div>
+                <div class="line line-1"></div>
+                <div class="line line-2"></div>
+                <div class="line line-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <label class="day-night">
+        <input type="checkbox" />
+        <div></div>
+    </label>
+
+</body>
+</html>
